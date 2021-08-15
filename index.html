@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script type="text/x-mathjax-config" defer>
+      MathJax.Hub.Config({
+          extensions: ["tex2jax.js", "TeX/AMSmath.js"],
+          jax: ["input/TeX", "output/SVG"],
+      })
+    </script>
+    <script
+      defer
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"
+    ></script>
+    <script
+      defer
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"
+    ></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/d72839d9f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ley del seno y coseno</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <h1><a href="#">Leyes del Seno y Coseno</a></h1>
+      <div class="nav-links">
+        <a id="triangulooblicuangulo" href="#triangulooblicuangulo"
+          >Triángulo Oblicuángulo</a
+        >
+        <a id="ley_del_seno" href="#ley-del-seno">Ley del seno</a>
+        <a id="ley-del-coseno" href="#ley-del-coseno">Ley del coseno</a>
+      </div>
+    </nav>
+
+    <div class="portada">
+      <div class="container portada-cont">
+        <img src="static/Escudo_Marista.png" alt="" style="grid-row: 1 / 3" />
+        <div class="subtitle">
+          <h2>Colegio Champagnat</h2>
+          <h2 style="color: rgb(156, 8, 8)">Matemáticas</h2>
+        </div>
+        <div class="portada-info">
+          <h1 class="main-title">Ley del seno y ley del coseno</h1>
+          <p>Trabajo por:</p>
+          <ul>
+            <li>- Fernando José Fuentes Castillo #14</li>
+            <li>- Lourdes Camila Lemus Rauda #23</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <main
+      x-data="{
+      openSin: false, 
+      openCos: false
+      }"
+    >
+      <div class="section">
+        <article class="container tr-content-container">
+          <h1 id="triangulooblicuangulo" class="title-sec">
+            Triángulo Oblicuángulo
+          </h1>
+          <div class="content-tr-flex">
+            <img
+              src="static/triangulo-oblicuangulo-.png"
+              alt="Triángulo oblicuángulo ejemplo"
+              class="oblic"
+            />
+            <div>
+              <p>
+                Un triángulo oblicuángulo es aquel que
+                <span style="font-weight: 800">
+                  no es recto ninguno de sus ángulos </span
+                >:
+              </p>
+              <ul class="bullet-list">
+                <li>
+                  Si tiene sus tres ángulos agudos se denomina triángulo
+                  oblicuángulo acutángulo
+                </li>
+                <li>Si tiene un ángulo obtuso se llama obtusángulo.</li>
+              </ul>
+              <hr />
+              <p>
+                El triángulo oblicuángulo se resuelve por las leyes de senos y
+                de cosenos, así como el que la suma de todos los ángulos
+                internos de un triángulo suman 180 grados.
+              </p>
+              <p style="font-size: 2rem; margin-top: 3rem">
+                $$\LARGE A + B + C = 180°$$
+              </p>
+            </div>
+          </div>
+          <p style="margin-top: 3rem">
+            Los triángulos oblicuángulos presentan cuatro casos posibles:
+          </p>
+          <div style="width: 60%; margin: 2rem auto">
+            <img
+              width="600"
+              src="static/casos-oblic.png"
+              alt="Casos del triángulo oblicuángulo"
+            />
+          </div>
+        </article>
+      </div>
+      <div class="section section2-bg">
+        <article class="container">
+          <h1 id="ley-del-seno" class="title-sec sec1">Ley del seno</h1>
+          <div class="content-tr-flex">
+            <div id="text">
+              <p>
+                <span style="font-weight: 800; display: block"
+                  >Definición de seno</span
+                >
+                <br />
+                En el contexto de las matemáticas, el seno es una función
+                trigonométrica de un triángulo rectángulo, que se calcula a
+                partir de la división del cateto opuesto por la hipotenusa.
+              </p>
+              <p style="margin-top: 1.5rem">
+                $$\sin\theta \ =\ \frac{Cateto\ Opuesto}{Hipotenusa}$$
+              </p>
+              <hr />
+              <p style="margin-bottom: 1rem">
+                La trigonometría define la ley de los senos como una relación de
+                proporcionalidad entre la longitud de cada lado de un triángulo
+                y el seno de cada ángulo opuesto respectivo. Suele presentarse
+                con la siguiente definición:
+                <span style="font-weight: 800">
+                  si en el triángulo ABC entendemos que a, b y c son las
+                  longitudes de sus lados opuestos, podemos decir que:
+                </span>
+              </p>
+              <p
+                style="
+                  border: 2px solid rgb(175, 6, 6);
+                  padding: 10px;
+                  text-align: center;
+                  border-radius: 5px;
+                "
+              >
+                $$\frac{a}{\sin A} =\frac{b}{\sin B} =\frac{c}{\sin C}$$
+              </p>
+            </div>
+            <div>
+              <img
+                width="350"
+                src="static/1200px-Ley_de_los_senos.svg.png"
+                alt="Ley de los senos ejemplo"
+                style="margin-left: 2rem"
+              />
+            </div>
+          </div>
+
+          <div class="ejemplos-senos">
+            <h4 style="font-size: 1.5rem; font-weight: 800" class="title-sec">
+              Ejemplos:
+            </h4>
+            <span
+              style="display: block; margin-top: 10px"
+              x-text="!openSin ? 'Mostrar más' : 'Mostrar menos'"
+            ></span>
+            <i
+              x-show="!openSin"
+              class="fas fa-sort-down fa-7x"
+              onclick="displayExamples(false, false, 'disp', 'content', '.slide')"
+              @click="openSin = !openSin"
+            ></i>
+            <i
+              style="margin-top: -2.5rem"
+              x-show="openSin"
+              class="fas fa-sort-up fa-7x"
+              onclick="displayExamples(true, true, 'disp', 'content', '.slide')"
+              @click="openSin = !openSin"
+            >
+            </i>
+          </div>
+        </article>
+      </div>
+      <div class="displayable senos-section" id="disp">
+        <div style="margin-bottom: 30px" id="content" class="content">
+          <button class="button-control" onclick="returnSlide('sin', '.slide')">
+            <i class="fas fa-chevron-left fa-3x"></i>
+          </button>
+          <div class="slide fade">
+            <h3 class="main-title">Caso ALA</h3>
+            <div class="main-content-eg">
+              <img
+                style="width: 500px"
+                class="image-example oblic"
+                src="static/ejemplo-laa.png"
+                alt=""
+              />
+              <div class="formulas">
+                <p>$$\frac{a}{\sin A} =\frac{b}{\sin B}$$</p>
+                <p>$$\frac{a}{\sin 33} =\frac{45}{\sin 110}$$</p>
+                <p>$$a =\frac{45 * \sin 33}{\sin 110}$$</p>
+                <p style="color: rgb(143, 9, 9)">$$\bf a = 26.08$$</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide fade">
+            <h3 class="main-title" style="font-size: 1.5rem">Caso LLA</h3>
+            <div class="main-content-eg">
+              <img
+                style="width: 400px"
+                class="image-example oblic"
+                width="100"
+                src="static/ejemplo-lla.png"
+                alt=""
+              />
+              <div class="formulas">
+                <p>$$\frac{c}{\sin C} =\frac{b}{\sin B}$$</p>
+                <p>$$\frac{15}{\sin C} =\frac{18}{\sin 45}$$</p>
+                <p>$$\sin C =\frac{\sin 45 * 15}{18}$$</p>
+                <p>
+                  $$\displaystyle c\ =\ \sin^{-1}\left(\frac{\sin 45\ *\
+                  15}{18}\right)$$
+                </p>
+                <p style="color: rgb(143, 9, 9); margin-bottom: 30px">
+                  $$\bf c = 36.10$$
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="button-control"
+            onclick="forwardSlide('sin', '.slide')"
+          >
+            <i class="fas fa-chevron-right fa-3x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="section section-3-bg">
+        <article class="container cos-section">
+          <h1 class="title-sec" id="ley-del-coseno">Ley del coseno</h1>
+          <h2 style="margin-bottom: 1.5rem">Definición de coseno</h2>
+          <div class="content-cos-flex-1">
+            <div>
+              <p style="margin-bottom: 10px">
+                La idea de coseno se emplea en el terreno de la geometría.
+                Coseno es el seno del complemento de un arco o de un ángulo. El
+                complemento, por su parte, es el ángulo que, sumándose a otro,
+                completa un ángulo de 90°. La abreviatura oficial de esta
+                función trigonométrica es <i>cos</i>, y de esta forma la
+                encontramos en las ecuaciones y en las calculadoras.
+              </p>
+              <p>
+                $$\displaystyle \cos \alpha \ =\ \frac{b}{c} \ =\ \frac{Cateto\
+                adyacente}{Hipotenusa}$$
+              </p>
+            </div>
+            <div class="coseno-definicion">
+              <img src="static/coseno.png" alt="Coseno definición y gráfica" />
+            </div>
+          </div>
+          <hr style="border: none" />
+          <div class="content-cos-flex-2">
+            <div class="tcoseno-def">
+              <img
+                style="margin-top: 20px"
+                src="static/coseno2.jpg"
+                alt="Coseno ejemplo triángulo uno"
+              />
+            </div>
+            <div>
+              <p style="margin-bottom: 15px">
+                La ley de cosenos, que también se conoce como el teorema del
+                coseno, es una generalización del conocido teorema de Pitágoras.
+                Se trata de la relación que se puede establecer entre uno de los
+                lados de un triángulo rectángulo con los dos restantes y con el
+                coseno del ángulo que éstos forman.
+              </p>
+              <p style="margin-bottom: 3rem">
+                La ley de los cosenos es usada para encontrar las partes
+                faltantes de un triángulo oblicuo (no rectángulo) cuando ya sea
+                las medidas de dos lados y la medida del ángulo incluído son
+                conocidas (LAL) o las longitudes de los tres lados (LLL) son
+                conocidas.
+              </p>
+              <p>$$\Large c^{2} \ =\ a^{2} \ +\ b^{2} \ -\ 2ab\ *\ \cos C$$</p>
+            </div>
+          </div>
+          <div class="ejemplos-senos">
+            <h4 style="font-size: 1.5rem; font-weight: 800" class="title-sec">
+              Ejemplos:
+            </h4>
+            <span
+              style="display: block; margin-top: 10px"
+              x-text="!openCos ? 'Mostrar más' : 'Mostrar menos'"
+            ></span>
+            <i
+              x-show="!openCos"
+              class="fas fa-sort-down fa-7x"
+              onclick="displayExamples(false, false, 'dispCos', 'contentCos', '.slideCos')"
+              @click="openCos = !openCos"
+            ></i>
+            <i
+              style="margin-top: -2.5rem"
+              x-show="openCos"
+              class="fas fa-sort-up fa-7x"
+              onclick="displayExamples(true, true, 'dispCos', 'contentCos', '.slideCos')"
+              @click="openCos = !openCos"
+            >
+            </i>
+          </div>
+        </article>
+      </div>
+      <div class="displayable senos-section" id="dispCos">
+        <div id="contentCos" class="content">
+          <button
+            class="button-control"
+            onclick="returnSlide('cos', '.slideCos')"
+          >
+            <i class="fas fa-chevron-left fa-3x"></i>
+          </button>
+          <div class="slideCos fade">
+            <h2 style="margin-bottom: 2rem" class="main-title">Caso LLL</h2>
+            <div class="main-content-eg">
+              <img
+                style="width: 350px"
+                class="oblic"
+                src="static/cos-ex-1.png"
+                alt="Coseno ejemplo LLL"
+              />
+              <div class="formulas">
+                <p>$$b^{2} \ =\ a^{2} \ +\ c^{2} \ -\ 2ac\ *\ \cos B$$</p>
+                <p>$$\cos B\ =\ \frac{a^{2} +c^{2} -b^{2}}{2ac}$$</p>
+                <p>$$\cos B\ =\ \frac{50^{2} +116^{2} -84^{2}}{2*50*116}$$</p>
+                <p>
+                  $$\displaystyle B\ =\cos^{-1}\left( \ \frac{50^{2} +116^{2}
+                  -84^{2}}{2*50*116}\right)$$
+                </p>
+                <p style="color: rgb(143, 9, 9)">$$B = 38.89° $$</p>
+              </div>
+            </div>
+          </div>
+          <div class="slideCos fade">
+            <h2 style="margin-bottom: 2rem" class="main-title">Caso LAL</h2>
+            <div class="main-content-eg">
+              <img
+                style="width: 350px"
+                class="oblic"
+                src="static/cos-ex-2.png"
+                alt="Ejemplo de coseno caso LAL"
+              />
+              <div class="formulas">
+                <p>$$c^{2} \ =\ a^{2} \ +\ b^{2} \ -\ 2ab\ *\ \cos C$$</p>
+                <p>
+                  $$c^{2} \ =\ 10^{2} \ +\ 14^{2} \ -\ 2( 10)( 14) \ *\ \cos
+                  60$$
+                </p>
+                <p>
+                  $$\displaystyle c\ =\ \sqrt{10^{2} \ +\ 14^{2} \ -\ 2( 10)(
+                  14) \ *\ \cos 60}$$
+                </p>
+                <p style="color: rgb(143, 9, 9)">$$c = 12.49$$</p>
+              </div>
+            </div>
+          </div>
+          <div class="slideCos fade"></div>
+
+          <button
+            class="button-control"
+            onclick="forwardSlide('cos', '.slideCos')"
+          >
+            <i class="fas fa-chevron-right fa-3x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-4-bg">
+        <article class="container">
+          <h1 style="padding-top: 2rem" class="title-sec">Diferencias</h1>
+          <div class="diff senos-section">
+            <div style="display: flex" class="content">
+              <button
+                class="button-control"
+                onclick="returnSlide('ex', '.slideDiff')"
+              >
+                <i class="fas fa-chevron-left fa-3x"></i>
+              </button>
+              <div class="slideDiff fade">
+                <div class="grid-diff">
+                  <h3
+                    style="
+                      border-right: 1px solid #dfdfdf;
+                      background-color: #f2cc8f;
+                      padding: 10px 0;
+                    "
+                    class="main-title"
+                  >
+                    Ley del seno
+                  </h3>
+                  <h3
+                    style="background-color: #e07a5f; padding: 10px 0"
+                    class="main-title"
+                  >
+                    Ley del coseno
+                  </h3>
+                  <div class="description">
+                    <p>
+                      Representa la variación de la ordenada del punto en
+                      función de su ángulo x.
+                    </p>
+                    <p>Seno = Opuesto / Hipotenusa</p>
+                    <img
+                      style="margin: 1rem 0"
+                      src="static/seno-diff.png"
+                      alt="Diferencia del seno"
+                    />
+                    <p>
+                      $$\frac{a}{\sin A} =\frac{b}{\sin B} =\frac{c}{\sin C}$$
+                    </p>
+                  </div>
+                  <div class="description">
+                    <p>
+                      Representa la variación de la abscisa del punto en función
+                      de su ángulo x.
+                    </p>
+                    <p>Coseno = Adyacente / Hipotenusa</p>
+                    <img
+                      style="margin: 1rem 0"
+                      src="static/cos-diff.png"
+                      alt="Diferencia del coseno"
+                    />
+                    <p>$$c^2 = a^2 + b^2 - 2ab * \cos A$$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slideDiff fade">
+                <div class="grid-diff">
+                  <h3
+                    style="
+                      border-right: 1px solid #dfdfdf;
+                      background-color: #f2cc8f;
+                      padding: 10px 0;
+                    "
+                    class="main-title"
+                  >
+                    Ley del seno
+                  </h3>
+                  <h3
+                    style="background-color: #e07a5f; padding: 10px 0"
+                    class="main-title"
+                  >
+                    Ley del coseno
+                  </h3>
+                  <div class="description">
+                    Aplicación de la razón trigonométrica seno a una variable
+                    independiente, que se suele expresar en radianes.
+                  </div>
+                  <div class="description">
+                    Permite representar el valor del coseno para ángulos no
+                    agudos. Se define como la razón entre el cateto adyacente a
+                    dicho ángulo y la hipotenusa.
+                  </div>
+                </div>
+                <div style="width: 50%; margin: 2rem auto">
+                  <img src="static/diff-example.gif" alt="" />
+                </div>
+              </div>
+              <div class="slideDiff fade">
+                <div class="grid-diff">
+                  <h3
+                    style="
+                      border-right: 1px solid #dfdfdf;
+                      background-color: #f2cc8f;
+                      padding: 10px 0;
+                    "
+                    class="main-title"
+                  >
+                    Ley del seno
+                  </h3>
+                  <h3
+                    style="background-color: #e07a5f; padding: 10px 0"
+                    class="main-title"
+                  >
+                    Ley del coseno
+                  </h3>
+                  <div class="description">
+                    <p>
+                      Es la relación entre los lados y ángulos de triángulos no
+                      rectángulos (oblicuos), simplemente, establece que la
+                      relación de la longitud de un lado de un triángulo al seno
+                      del ángulo opuesto a ese lado es igual para todos los
+                      lados y ángulos en un triángulo dado.
+                    </p>
+                    <img
+                      width="300px"
+                      style="margin-top: 30px"
+                      src="static/sen-ex-diff.png"
+                      alt="Seno diferencias ejemplo."
+                    />
+                  </div>
+                  <div class="description">
+                    <p>
+                      Es usada para encontrar las partes faltantes de un
+                      triángulo oblicuo (no rectángulo) cuando ya sea las
+                      medidas de dos lados y la medida del ángulo incluido son
+                      conocidas (LAL) o las longitudes de los tres lados (LLL)
+                      son conocidas.
+                    </p>
+                    <img
+                      width="300px"
+                      style="margin-top: 30px"
+                      src="static/cos-ex-diff.png"
+                      alt="Coseno diferencias ejemplo"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="button-control"
+                onclick="forwardSlide('ex', '.slideDiff')"
+              >
+                <i class="fas fa-chevron-right fa-3x"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script src="menus.js"></script>
+  </body>
+</html>
